@@ -12,7 +12,7 @@ export default class TodoList extends React.Component {
             <TodoContainer>
                 {this.props.todos.length > 0 &&
                     <>
-                    {this.props.todos.map(todo => <TodoElement key={todo.id} todo={todo} />)}
+                    {this.props.todos.map(todo => <TodoElement onRemove={this.props.removeTodo} key={todo.id} todo={todo} />)}
                     </>
                 }
             </TodoContainer>

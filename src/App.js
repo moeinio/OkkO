@@ -14,12 +14,15 @@ export default class App extends React.Component {
   onAddTodo = (todo) => {
     this.setState({ todos: [...this.state.todos, todo] })
   }
+  onRemoveTodo = (id) => {
+    this.setState({ todos: this.state.todos.filter(todo => todo.id !== id) })
+  }
 
   render() {
     return (
       <div className="App">
         <AddTodo addTodo={this.onAddTodo} />
-        <TodoList todos={this.state.todos} />
+        <TodoList todos={this.state.todos} removeTodo={this.onRemoveTodo}/>
       </div>
     )
   };

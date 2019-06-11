@@ -4,15 +4,27 @@ import styled from 'styled-components';
 
 
 export default class TodoElement extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            isOpen: false
+        }
+    }
+
     render() {
         return (
-            <TodoElementContainer>
-                <TodoElementId>
-                    # {this.props.todo.id}
-                </TodoElementId>
-                <TodoElementTasl>
+            <TodoElementContainer onClick={() => this.setState({isOpen: true})}>
+                <TodoElementHeader>
+                    <TodoElementRemove onClick={() => this.props.onRemove(this.props.todo.id)}>
+                        X
+                    </TodoElementRemove>
+                    <TodoElementId>
+                        # {this.props.todo.id}
+                    </TodoElementId>
+                </TodoElementHeader>
+                <TodoElementTask isOpen={this.state.isOpen}>
                     {this.props.todo.task}
-                </TodoElementTasl>
+                </TodoElementTask>
             </TodoElementContainer>
         )
     }
@@ -22,14 +34,19 @@ const TodoElementContainer = styled.div`
 background: #13e4e9;
 border: solid 1px black;
 margin: 2%;
-height: 8em;
 flex-grow: 1;
 font-size: 1em;
+flex-basis: 25%;
 `
 
 const TodoElementId = styled.div `
 
 `
-const TodoElementTasl = styled.div `
+const TodoElementTask = styled.div `
+`
+const TodoElementHeader = styled.div `
+
+`
+const TodoElementRemove = styled.button `
 
 `

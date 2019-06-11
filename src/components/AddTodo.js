@@ -17,7 +17,7 @@ export default class AddTodo extends React.Component {
         // dein code
 
         this.props.addTodo(todo);
-    }
+    };
 
 
     render() {
@@ -43,9 +43,12 @@ const NewTaskInput = styled.input`
 padding: 1em;
 flex-grow: 1;
 margin-right: 1em;
-`
+`;
 const NewTaskSubmitButton = styled.button`
 padding: 1em;
 flex-grow: 0;
+color: white;
+background-color: blue;
+border: 0;
 `;
 
