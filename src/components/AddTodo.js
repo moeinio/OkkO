@@ -43,12 +43,14 @@ const NewTaskInput = styled.input`
 padding: 1em;
 flex-grow: 1;
 margin-right: 1em;
+background-color: #2196F3;
+border: solid 1px white;
 `;
 const NewTaskSubmitButton = styled.button`
 padding: 1em;
 flex-grow: 0;
 color: white;
-background-color: blue;
+background-color: #3F51B5;
 border: 0;
 `;
 

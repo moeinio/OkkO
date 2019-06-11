@@ -13,10 +13,10 @@ export default class App extends React.Component {
 
   onAddTodo = (todo) => {
     this.setState({ todos: [...this.state.todos, todo] })
-  }
+  };
   onRemoveTodo = (id) => {
     this.setState({ todos: this.state.todos.filter(todo => todo.id !== id) })
-  }
+  };
 
   render() {
     return (

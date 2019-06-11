@@ -15,7 +15,7 @@ export default class CommentsViewer extends React.Component {
     let comments = await r.json();
 
     this.setState({ comments: comments })
-  }
+  };
 
   render() {
     return (

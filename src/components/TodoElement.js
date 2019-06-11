@@ -31,8 +31,8 @@ export default class TodoElement extends React.Component{
 }
 
 const TodoElementContainer = styled.div`
-background: #13e4e9;
-border: solid 1px black;
+background: #03A9F4;
+border: solid 1px white;
 margin: 2%;
 flex-grow: 1;
 font-size: 1em;
