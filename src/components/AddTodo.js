@@ -13,7 +13,7 @@ export default class AddTodo extends React.Component {
 
     onAddTodo = (e) => {
         this.setState({id: this.state.id + 1});
-        let todo = {id: this.state.id, task: this.state.task};
+        let todo = {id: this.state.id+1, task: this.state.task};
 
         // dein code
 
@@ -43,9 +43,9 @@ const NewTask = styled.div`
 `;
 
 const NewTaskInput = styled.input`
-padding: 1em;
-margin-right: 1em;
-background-color: #2196F3;
-border: solid 1px white;
-flex-basis: 75%;
+    padding: 1em;
+    margin-right: 1em;
+    background-color: #2196F3;
+    border: solid 1px white;
+    flex-basis: 75%;
 `;

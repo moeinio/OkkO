@@ -14,7 +14,7 @@ export default class TodoElement extends React.Component{
 
     render() {
         return (
-            <TodoElementContainer onClick={() => this.setState({expanded: true})}>
+            <TodoElementContainer expanded={this.state.expanded} onClick={() => this.setState({expanded: !this.state.expanded})}>
                 <TodoElementHeader>
                     <CloseButton onClick={() => this.props.onRemove(this.props.todo.id)}>
                         <FontAwesomeIcon icon={faTrash}/>
@@ -23,8 +23,8 @@ export default class TodoElement extends React.Component{
                         # {this.props.todo.id}
                     </TodoElementId>
                 </TodoElementHeader>
-                <TodoElementTask expanded={this.state.expanded}>
-                    {this.props.todo.task}
+                <TodoElementTask>
+                    {this.state.expanded ? this.props.todo.task : this.props.todo.task.substr(0,100).concat(' ...')}
                 </TodoElementTask>
             </TodoElementContainer>
         )
@@ -32,11 +32,17 @@ export default class TodoElement extends React.Component{
 }
 
 const TodoElementContainer = styled.div`
-background: #03A9F4;
-font-size: 1em;
-flex-basis: 30%;
-margin-top: 1em;
-max-height: 10em;
+    background: #03A9F4;
+    font-size: 1em;
+    margin-top: 1em;
+    ${props => props.expanded ? `
+        flex-basis: 96.5%;
+        max-height: max-content;
+        ` : `
+        flex-basis: 30%;
+        max-height: 10em;
+    `};
+    
 `;
 
 const TodoElementId = styled.div`
@@ -45,10 +51,6 @@ const TodoElementId = styled.div`
 
 const TodoElementTask = styled.div`
     padding: 0.5em;
-     
-    ${props => props.expanded && ({
-       
-    })}
 `;
 
 const TodoElementHeader = styled.div`

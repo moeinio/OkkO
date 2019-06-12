@@ -13,7 +13,7 @@ const Button = styled.button`
 
 const CloseButton = styled.button`
     background: transparent;
-    color: black;
+    color: white;
     border: 0;
     &:focus {
     border: none;
