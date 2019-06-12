@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Button = styled.button`
     padding: 1em;
     color: white;
-    background-color: #3F51B5;
+    background-color: #2962FF;
     border: 0;
     flex-basis: 15%;
     &:focus {
@@ -18,8 +18,6 @@ const CloseButton = styled.button`
     &:focus {
     border: none;
     }
-
-;
 `;
 
 export  { CloseButton }

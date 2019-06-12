@@ -7,14 +7,14 @@ export default class AddTodo extends React.Component {
         super(props)
         this.state = {
             id: 0,
+            title: '',
             task: '',
-            creationDate: ''
         }
     }
 
     onAddTodo = (e) => {
         this.setState({id: this.state.id + 1});
-        let todo = {id: this.state.id+1, task: this.state.task, creationDate: new Date().toLocaleString()};
+        let todo = {id: this.state.id+1,title: this.state.title, task: this.state.task, creationDate: new Date().toLocaleString('DE')};
 
         // dein code
 
@@ -46,7 +46,7 @@ const NewTask = styled.div`
 const NewTaskInput = styled.input`
     padding: 1em;
     margin-right: 1em;
-    background-color: #2196F3;
+    background-color: #64B5F6;
     border: solid 1px white;
     flex-basis: 75%;
 `;

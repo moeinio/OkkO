@@ -1,5 +1,5 @@
 {
-  "name": "image-compression",
+  "name": "todolist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +8,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-modal": "^3.8.1",
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.1"
   },

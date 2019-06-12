@@ -20,7 +20,7 @@ export default class TodoElement extends React.Component{
                         <FontAwesomeIcon icon={faTrash}/>
                     </CloseButton>
                     <TodoElementId>
-                        # {this.props.todo.id}
+                        # {this.props.todo.id} {this.props.todo.title}
                     </TodoElementId>
                 </TodoElementHeader>
                 <TodoElementTask>
@@ -35,7 +35,7 @@ export default class TodoElement extends React.Component{
 }
 
 const TodoElementContainer = styled.div`
-    background: #03A9F4;
+    background: #1E88E5;
     font-size: 1em;
     margin-top: 1em;
     ${props => props.expanded ? `
@@ -57,14 +57,14 @@ const TodoElementTask = styled.div`
 `;
 
 const TodoElementHeader = styled.div`
-    background: #F44336;
+    background: #2196F3;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     padding: 0.5em;
 `;
 const TodoElementFooter = styled.div`
-    background: #F44336;
+    background: #2196F3;
     padding: 0.5em;
     font-size: 0.6em;
     font-weight: lighter;

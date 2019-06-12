@@ -27,7 +27,7 @@ export default class App extends React.Component {
           <div className="App">
             <GlobalStyle whiteColor  />
             <AddTodo addTodo={this.onAddTodo} />
-            <TodoList todos={this.state.todos} removeTodo={this.onRemoveTodo}/>
+            <TodoList todos={this.state.todos} removeTodo={this.onRemoveTodo} />
           </div>
         </ThemeProvider>
 
