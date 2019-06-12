@@ -7,13 +7,14 @@ export default class AddTodo extends React.Component {
         super(props)
         this.state = {
             id: 0,
-            task: ''
+            task: '',
+            creationDate: ''
         }
     }
 
     onAddTodo = (e) => {
         this.setState({id: this.state.id + 1});
-        let todo = {id: this.state.id+1, task: this.state.task};
+        let todo = {id: this.state.id+1, task: this.state.task, creationDate: new Date().toLocaleString()};
 
         // dein code
 

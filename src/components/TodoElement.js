@@ -26,6 +26,9 @@ export default class TodoElement extends React.Component{
                 <TodoElementTask>
                     {this.state.expanded ? this.props.todo.task : this.props.todo.task.substr(0,100).concat(' ...')}
                 </TodoElementTask>
+                <TodoElementFooter>
+                    Created on: {this.props.todo.creationDate}
+                </TodoElementFooter>
             </TodoElementContainer>
         )
     }
@@ -59,4 +62,10 @@ const TodoElementHeader = styled.div`
     justify-content: space-between;
     flex-direction: row-reverse;
     padding: 0.5em;
+`;
+const TodoElementFooter = styled.div`
+    background: #F44336;
+    padding: 0.5em;
+    font-size: 0.6em;
+    font-weight: lighter;
 `;
