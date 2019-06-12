@@ -3,10 +3,6 @@ import styled from "styled-components";
 import TodoElement from "./TodoElement";
 
 export default class TodoList extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return (
             <TodoContainer>
