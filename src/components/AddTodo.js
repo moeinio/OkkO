@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import Button from "./styled/Button";
 
 export default class AddTodo extends React.Component {
     constructor(props) {
@@ -24,9 +25,9 @@ export default class AddTodo extends React.Component {
         return (
             <NewTask>
                 <NewTaskInput type="text" onChange={e => this.setState({task: e.target.value})}/>
-                <NewTaskSubmitButton onClick={e => this.onAddTodo(e)}>
+                <Button onClick={e => this.onAddTodo(e)}>
                     Add a new task
-                </NewTaskSubmitButton>
+                </Button>
             </NewTask>
 
         )
@@ -35,22 +36,16 @@ export default class AddTodo extends React.Component {
 }
 
 const NewTask = styled.div`
-display: flex;
-font-size: 1em;
+  font-size: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 `;
 
 const NewTaskInput = styled.input`
 padding: 1em;
-flex-grow: 1;
 margin-right: 1em;
 background-color: #2196F3;
 border: solid 1px white;
+flex-basis: 75%;
 `;
-const NewTaskSubmitButton = styled.button`
-padding: 1em;
-flex-grow: 0;
-color: white;
-background-color: #3F51B5;
-border: 0;
-`;
-

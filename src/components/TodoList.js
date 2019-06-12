@@ -20,9 +20,8 @@ export default class TodoList extends React.Component {
     };
 }
 const TodoContainer = styled.div`
-font-size: 1em;
-display: flex;
-justify-content: space-between;
-flex-direction: row;
-flex-wrap: wrap;
+  font-size: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 `
