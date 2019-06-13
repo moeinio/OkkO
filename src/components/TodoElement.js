@@ -45,12 +45,12 @@ export default class TodoElement extends React.Component {
 export class TodoElementContent extends React.Component {
     state = {
         inEdit: false
-    }
+    };
 
     updateTodo = (task) =>{
         let updatedTodo =  {...this.props.todo, task: task};
         this.props.updateTodo(this.props.todo.id, updatedTodo)
-    }
+    };
 
     render() {
         return (

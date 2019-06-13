@@ -11,7 +11,7 @@ export default class TextInput extends React.Component {
 
     textChange = (e) => {
         this.setState({ text: e.target.value })
-    }
+    };
 
     render() {
         return (

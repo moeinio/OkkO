@@ -36,7 +36,7 @@ export default class App extends React.Component {
 
   saveTodos = () => {
     window.localStorage.setItem('todos', JSON.stringify(this.state.todos));
-  }
+  };
 
   render() {
     return (
