@@ -14,10 +14,7 @@ export default class AddTodo extends React.Component {
 
     onAddTodo = (e) => {
         this.setState({id: this.state.id + 1});
-        let todo = {id: this.state.id+1,title: this.state.title, task: this.state.task, creationDate: new Date().toLocaleString('DE')};
-
-        // dein code
-
+        let todo = {id: this.state.id+1,title: this.state.title, task: this.state.task};
         this.props.addTodo(todo);
     };
 

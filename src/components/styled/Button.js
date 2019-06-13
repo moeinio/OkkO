@@ -11,7 +11,7 @@ const Button = styled.button`
     }
 `;
 
-const CloseButton = styled.button`
+const DeleteButton = styled.button`
     background: transparent;
     color: white;
     border: 0;
@@ -20,5 +20,5 @@ const CloseButton = styled.button`
     }
 `;
 
-export  { CloseButton }
+export  { DeleteButton }
 export default Button
