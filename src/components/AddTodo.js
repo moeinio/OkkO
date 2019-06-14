@@ -44,6 +44,6 @@ const NewTaskInput = styled.input`
     padding: 1em;
     margin-right: 1em;
     background-color: #64B5F6;
-    border: solid 1px white;
+    border: solid 2px #0D47A1;
     flex-basis: 75%;
 `;
