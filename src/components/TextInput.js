@@ -1,24 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-export default class TextInput extends React.Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-            text: "",
-        }
-    }
+const TextInput = () => {
+    const [text, setText] = useState('');
 
     textChange = (e) => {
-        this.setState({ text: e.target.value })
+        setText(e.target.value )
     };
 
     render() {
         return (
             <div>
                 <input onChange={(e) => this.textChange(e)} />
-                {this.state.text}
+                {text}
             </div>
         )
     };
 }
+
+
+export default TextInput;
