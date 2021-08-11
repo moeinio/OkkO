@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "./styled/Button";
 
-function AddTodo(props) {
+const AddTodo = (props) => {
   const onAddTodo = () => {
     setId(id + 1);
     let todo = {
@@ -22,7 +22,7 @@ function AddTodo(props) {
       <Button onClick={() => onAddTodo()}>Add a new task</Button>
     </NewTask>
   );
-}
+};
 
 export default AddTodo;
 
